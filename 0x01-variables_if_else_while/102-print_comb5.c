@@ -1,28 +1,53 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - Entry point
+ * main - entry point
  *
- * Return: Always 0 (Success)
+ * Return: 0 Success
  */
 int main(void)
 {
-int i;
-int j;
-for (i = 48; i <= 57; i++)
-{
-for (j = 48; j <= 57; j++)
-{
-putchar(i);
-putchar(j);
-if (i == 57 && j == 57)
-{
-break;
-}
-putchar(44);
-putchar(32);
-}
-}
-putchar('\n');
+	int a, b, c, d;
+
+	for (a = 0; a <= 9; a++)
+	{
+		for (b = 0; b <= 9; b++)
+		{
+			for (c = a; c <= 9; c++)
+			{
+				if (c == a)
+				{
+	 				for (d = b + 1; d <=9; d++)
+					{
+						putchar(a + '0');
+						putchar(b + '0');
+						putchar(' ');
+						putchar(c + '0');
+						putchar(d + '0');
+						if ((a == 9) & (b == 8))
+							break;
+						putchar(',');
+						putchar(' ');
+					}
+				}
+				else
+				{
+					for (d = 0; d <= 9; d++)
+					{
+						putchar(a + '0');
+						putchar(b + '0');
+						putchar(' ');
+						putchar(c + '0');
+						putchar(d + '0');
+						if ((a == 9) && (b == 8))
+							break;
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
+		}
+	}
+	putchar('\n');
 return (0);
-}
+}}
