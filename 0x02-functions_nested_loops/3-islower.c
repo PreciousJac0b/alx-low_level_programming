@@ -3,7 +3,7 @@
 #include <ctype.h>
 
 /**
- * main - check the code.
+ * _islower - check for lowercase character.
  * @c: The character to check for
  *
  * Return: 1 if @c is lowercase otherwise 0.
