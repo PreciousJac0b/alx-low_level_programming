@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "dedugging"
+git commit -m "debugging"
 git push
