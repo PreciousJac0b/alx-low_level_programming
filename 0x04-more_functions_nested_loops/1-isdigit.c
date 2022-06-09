@@ -4,7 +4,8 @@
 
 /**
  * _isdigit - Checks for a digit (0 through 9)
- * @c: input to be checked
+ *
+ * @c: variable to check
  * 
  * Return: 1 if @c is a digit otherwise 0
  */
