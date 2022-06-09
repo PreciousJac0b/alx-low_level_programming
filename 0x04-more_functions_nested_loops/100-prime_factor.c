@@ -1,34 +1,38 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
- * main - entry point
+ * main - prints the largest prime number of a number
  *
- * Return: 0 Success
+ * Return: 0
  */
-int main()
+int main(void)
 {
-	long int i, j, k, n = 612852475143;
+	long int n, mp;
+	int k;
 
-	i = 2;
-	while(i < n)
+	k = 1;
+	mp = -1;
+	n = 612852475143;
+
+	while (n % 2 == 0)
 	{
-		if (n % i == 0)
-		{
-			j = 2;
-			while(j < i)
-			{
-				if (i % j == 0)
-				{
-					break;
-				}
-				else
-					j++;
-			}
-			if (j == i)
-				k = i;
-		}
-		i++;
+		mp = 2;
+		n = n / 2;
 	}
-	printf("%d\n", k);
+
+	for (k = 3; k <= sqrt(n); k = k + 2)
+	{
+		if (n % k == 0)
+		{
+			mp = k;
+			n = n / k;
+		}
+	}
+
+	if (n > 2)
+		mp = n;
+
+	printf("%ld\n", mp);
 	return (0);
 }
