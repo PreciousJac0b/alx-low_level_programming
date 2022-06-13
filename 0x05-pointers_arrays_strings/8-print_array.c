@@ -5,6 +5,7 @@
 /**
  * print_array - prints n elements in the array
  * @n: number of elements to be printed
+ * @a: array containing element
  */
 void print_array(int *a, int n)
 {
@@ -12,6 +13,7 @@ void print_array(int *a, int n)
 
 	if (n < 1)
 	{
+		break;
 	}
 	else
 	{
