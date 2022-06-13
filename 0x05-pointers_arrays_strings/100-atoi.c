@@ -1,51 +1,29 @@
 #include "main.h"
-
 /**
- * _atoi - converts string to int
- * @s: string input
- *
- * Return: resulting integer
+ * _atoi - int
+ * @s: pointer
+ * Return: int.
  */
 int _atoi(char *s)
 {
-	int a, b, c;
+	int i;
+	int res = 0;
+	int sig = -1;
+	int brk = 0;
 
-	a = 0;
-	b = 1;
-	while (*s != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (*s == '-')
-			b *= -1;
-		else if (*s == '+')
-			b *= +1;
-		else if ((*s >= '0') && (*s <= '9'))
+		if (s[i] == '-')
+			sig = sig * -1;
+		if (s[i] >= '0' && s[i] <= '9')
 		{
-			if (*s == '0')
-				c = 0;
-			else if (*s == '1')
-				c = 1;
-			else if (*s == '2')
-				c = 2;
-			else if (*s == '3')
-				c = 3;
-			else if (*s == '4')
-				c = 4;
-			else if (*s == '5')
-				c = 5;
-			else if (*s == '6')
-				c = 6;
-			else if (*s == '7')
-				c = 7;
-			else if (*s == '8')
-				c = 8;
-			else if (*s == '9')
-				c = 9;
-			a = (a * 10) + c;
-			if ((*(s + 1) > '9') || (*(s + 1) < '0'))
-				break;
+			res = res * 10;
+			res -= (s[i] - '0');
+			brk = 1;
 		}
-		s++;
+		else if (brk == 1)
+			break;
 	}
-	a *= b;
-	return (a);
+	res = sig * res;
+	return (res);
 }
