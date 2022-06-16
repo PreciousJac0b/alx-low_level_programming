@@ -1,15 +1,15 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * _strncat - concatenates two strings
+ * _strcat - to join two strings
  *
- * @dest: destination string
- * @src: source string
- * @n: amount of bytes used from src
+ * @dest: str1
+ * @src: srt2
  *
- * Return: the pointer to @dest
+ * Returns: pointer
  */
-char *_strncat(char *dest, char *src, int n)
+
+char *_strcat(char *dest, char *src)
 {
 	int lenSrc = 0, lenDest = 0;
 
@@ -17,7 +17,7 @@ char *_strncat(char *dest, char *src, int n)
 		lenDest++;
 
 	/* While true */
-	while (lenSrc < n)
+	while (1 == 1)
 	{
 		*(dest + lenDest) = *(src + lenSrc);
 		if (*(src + lenSrc) == '\0')
