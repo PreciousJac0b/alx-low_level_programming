@@ -4,6 +4,7 @@
  * _memset - fills the first n bytes with char
  * @s: string to be filled up
  * @b: char to be filled in the string
+ * @n: number of bytes to be filled up
  *
  * Return: pointer to char
  */
