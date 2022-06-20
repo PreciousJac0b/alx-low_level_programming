@@ -1,31 +1,21 @@
 #include "main.h"
 
 /**
- * _strpbrk - kocates the first occurence of any of a given characters in a string
- * @s: string to be checked
- * @accept: given characters
+ * _strpbrk - searches a string for any of a set of bytes
  *
- * Return: pointer to the first occurence
+ * @s: string
+ * @accept: accept string
+ *
+ * Return: the first occurrence in the string s of any of the
+ * bytes in the string accept
  */
 char *_strpbrk(char *s, char *accept)
 {
-	char *a, *b;
+	unsigned int i, j;
 
-	b = accept;
-	while (*s != '\0')
-	{
-		accept = b;
-		while (*accept != '\0')
-		{
-			if (*s == *accept)
-			{
-				a = accept;
-				break;
-			}
-			accept++;
-		}
-		if (*s == *accept)
-			break;
-	}
-	return (a);
+	for (i = 0; *(s + i) != '\0'; i++)
+		for (j = 0; *(accept + j) != '\0'; j++)
+			if (*(s + i) == *(accept + j))
+				return (s + i);
+	return ('\0');
 }
