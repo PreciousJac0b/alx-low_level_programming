@@ -1,0 +1,19 @@
+#include "main.h"
+
+/**
+ * _memset - fills the first n bytes with char
+ * @s: string to be filled up
+ * @b: char to be filled in the string
+ *
+ * Return: pointer to char
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
+	return (s);
+}
