@@ -1,1 +1,1 @@
-Solution to tasks involving the argc and argv[] arguments in c
+This repo contains solution to tasks related to alx-low_level_programming
