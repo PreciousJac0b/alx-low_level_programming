@@ -29,7 +29,7 @@ working with the C language. The specific list of projects I have completed so f
 * [0x14. C - Bit manipulation](./0x14-bit_manipulation)
 * [0x15. C - File I/O](./0x15-file_io)
 
-## Author :African Coder(Norman):
+## Author :Chiemezie Precious Jacob:
 
 * __Precious Jacob(Chiemezie Jacob)__ <[Cheerio-ban](https://github.com/Cheerio-ban)>
 
