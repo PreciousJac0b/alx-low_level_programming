@@ -5,6 +5,7 @@
 
 /**
  * hash_table_set - adds an element to the hash table
+ * @ht: The hashtable
  * @key: hashtable key
  * @value: value to be added to key index
  *
