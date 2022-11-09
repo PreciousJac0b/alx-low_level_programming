@@ -1,8 +1,8 @@
 .PHONY: all
 
 CC = gcc
-SRCS = $(wildcard *.c)
+SRC = $(wildcard *.c)
 
-all: ${SRCS}
-	${CC} ${SRCS} -o school
+all: ${SRC}
+	${CC} ${SRC} -o school
 
