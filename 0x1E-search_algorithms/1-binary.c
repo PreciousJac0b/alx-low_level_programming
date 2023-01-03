@@ -38,6 +38,7 @@ int binary_search(int *array, size_t size, int value)
 
 /**
  * print_array - prints a given array
+ * @array: Array to be printed
  * @start: printing starting point
  * @stop: stopping point for printing
  *
